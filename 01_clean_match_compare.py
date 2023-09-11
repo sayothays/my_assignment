@@ -94,4 +94,4 @@ for i, row in df_match.iterrows():
         row['cheapest_store'] = 'GLOBAL HOUSE'
     else:
         row['cheapest_store'] = 'DOHOME'
-df_raw_global_house.to_csv('./product_price_comparison.csv')
+df_match[(df_match['check'] != '') & (df_match['brand'] != '')].to_csv('./product_price_comparison.csv')
